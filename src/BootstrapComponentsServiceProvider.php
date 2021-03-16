@@ -5,6 +5,7 @@ namespace Kevocde\BootstrapComponents;
 use Illuminate\Support\ServiceProvider;
 use Kevocde\BootstrapComponents\View\Components\Alert;
 use Kevocde\BootstrapComponents\View\Components\Breadcrumb;
+use Kevocde\BootstrapComponents\View\Components\Card;
 use Kevocde\BootstrapComponents\View\Components\Menu;
 
 class BootstrapComponentsServiceProvider extends ServiceProvider
@@ -23,7 +24,8 @@ class BootstrapComponentsServiceProvider extends ServiceProvider
         $this->loadViewComponentsAs('bc', [
             Menu::class,
             Alert::class,
-            Breadcrumb::class
+            Breadcrumb::class,
+            Card::class
         ]);
     }
 
