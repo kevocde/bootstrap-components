@@ -1,0 +1,19 @@
+{
+    "name": "kevocde/bootstrap-components",
+    "description": "Paquete Laravel que implementa componentes específicos del framework boostrap CSS y algo más",
+    "type": "package",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "kevocde",
+            "email": "kevocde@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Kevocde\\BoostrapComponents\\": "src/"
+        }
+    },
+    "require": {}
+}
