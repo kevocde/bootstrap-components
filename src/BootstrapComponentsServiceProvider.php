@@ -3,6 +3,7 @@
 namespace Kevocde\BootstrapComponents;
 
 use Illuminate\Support\ServiceProvider;
+use Kevocde\BootstrapComponents\View\Components\Alert;
 use Kevocde\BootstrapComponents\View\Components\Menu;
 
 class BootstrapComponentsServiceProvider extends ServiceProvider
@@ -19,7 +20,8 @@ class BootstrapComponentsServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'bc');
 
         $this->loadViewComponentsAs('bc', [
-            Menu::class
+            Menu::class,
+            Alert::class
         ]);
     }
 
