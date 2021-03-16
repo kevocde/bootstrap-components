@@ -2,6 +2,7 @@
 
 namespace Kevocde\BootstrapComponents\View\Components;
 
+use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
 use Illuminate\View\Component;
 

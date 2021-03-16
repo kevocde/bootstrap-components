@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Kevocde\BootstrapComponents\View\Components;
 
 
