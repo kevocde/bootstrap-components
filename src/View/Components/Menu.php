@@ -7,25 +7,21 @@ use Illuminate\View\View;
 
 class Menu extends BaseComponent
 {
-    public $items;
-
     /**
-     * Create a new component instance.
-     *
-     * @param $items
+     * @var Collection Listado de links a renderizar para el menú
      */
-    public function __construct($items)
+    public $links;
+
+    public function __construct($links)
     {
         parent::__construct();
-        $this->items = collect();
+        $this->links = collect();
 
-        $this->setItems($items);
+        $this->setLinks($links);
     }
 
     /**
-     * Get the view / contents that represent the component.
-     *
-     * @return View|string
+     * @inheritdoc
      */
     public function render()
     {
@@ -33,16 +29,16 @@ class Menu extends BaseComponent
     }
 
     /**
-     * @param Collection|array $items
+     * @param mixed $links
      */
-    private function setItems($items)
+    private function setLinks($links)
     {
-        foreach ($items as $key => $item) {
-            $url = $this::getUrl($item);
-            $label = isset($item['label']) ? $item['label'] : $key;
+        foreach ($links as $key => $link) {
+            $url = $this::getUrl($link);
+            $label = isset($link['label']) ? $link['label'] : $key;
             $active = $url === url()->current();
 
-            $this->items->push(compact('url', 'label', 'active'));
+            $this->links->push(compact('url', 'label', 'active'));
         }
     }
 

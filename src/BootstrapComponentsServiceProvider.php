@@ -18,7 +18,7 @@ class BootstrapComponentsServiceProvider extends ServiceProvider
 
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'bc');
 
-        $this->loadViewComponentsAs(null, [
+        $this->loadViewComponentsAs('bc', [
             Menu::class
         ]);
     }
